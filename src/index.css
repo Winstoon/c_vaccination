@@ -1,0 +1,175 @@
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#root{ height: 100%; }
+
+.App{
+  height: 100%;
+  display: flex;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  border-right: 3px solid #e4e4e4;
+}
+
+.left .label{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid #e4e4e4;
+}
+
+.left .label > label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.left .label > label:hover{
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+
+.left .label > label > span{
+  color: #0086f6;
+  font-size: 16px;
+  margin-right: 12px;
+}
+.left .label > label > strong{
+  color: #333;
+  font-size: 14px;
+}
+
+.left .label > label > input{
+  display: none;
+}
+
+.left .label .sheets{
+  display: flex;
+  flex-direction: column;
+  padding: 14px 20px;
+}
+.left .label .sheets li{
+  padding: 6px 8px;
+  font-size: 14px;
+}
+.left .label .sheets .caption{
+  padding: 6px 0;
+}
+
+.left .label .sheets .option{
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+.left .label .sheets .option:hover{
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+
+.left .label .sheets .option.active{
+  color: #fff;
+  background-color: #0086f6;
+}
+
+.left .submit{
+  display: flex;
+  padding: 20px;
+}
+
+.left .submit button{
+  flex: 1;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #0086f6;
+  margin-left: 12px;
+  transition: background-color .15s;
+}
+
+.left .submit.disabled button{
+  background-color: #e4e4e4;
+  color: #999;
+}
+
+.left .submit:not(.disabled) button:hover{
+  cursor: pointer;
+  background-color: #0070cc;
+}
+
+.left .submit:not(.disabled) button:active{
+  background-color: #0086f6;
+}
+
+.right{
+  flex: 1;
+  padding: 20px;
+}
+
+.progress{
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.progress .bar{
+  background-color: #e4e4e4;
+  width: 50%;
+  height: 12px;
+  border-radius: 6px;
+  margin-left: 12px;
+  overflow: hidden;
+}
+.progress .bar .active{
+  background-color: #0086f6;
+  height: 10px;
+  transition: width .5s;
+}
+
+.right .result {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-size: 14px;
+}
+.right .result .caption{
+  margin-bottom: 20px;
+  color: #666;
+}
+.right .result .list li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.right .result .list .caption{
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.right .result .list .name{ width: 120px; }
+.right .result .list .identity{ width: 200px; }
+.right .result .list .date{ flex: 1; }
